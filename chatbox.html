@@ -44,7 +44,8 @@
             z-index: 999;
             width: 300px;
             height: 400px;
-            transition: transform 0.3s ease-in-out; /* Add this line */
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            transform: translateY(100%);
         }
 
         .chat-window-header {
@@ -86,9 +87,14 @@
                 transition: background-color 0.2s ease-in-out;
             }
 
-                .chat-window-footer button:hover {
-                    background-color: #3e8e41;
-                }
+            .chat-window-footer button:hover {
+                background-color: #3e8e41;
+            }
+
+        .chat-window.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -100,15 +106,7 @@
             var socket = new WebSocket("ws://localhost:8080");
 
             chatBox.addEventListener("click", function () {
-                if (chatWindow.style.display === "block") {
-                    chatWindow.style.display = "none";
-                } else {
-                    chatWindow.style.display = "block";
-                }
-            });
-
-            chatButton.addEventListener("click", function () {
-                var messageText = chatInput.value;
+                chatWindow.classList.toggle("show");
                 if (chatWindow.style.display === "block") {
                     chatWindow.style.transform = "translateY(100%)"; /* Add this line */
                     setTimeout(function () {
@@ -116,8 +114,12 @@
                     }, 300); /* Wait for the transition to finish */
                 } else {
                     chatWindow.style.display = "block";
-                    chatWindow.style.transform = "translateY(0)"; /* Add this line */
+                    hatWindow.style.transform = "translateY(0)"; /* Add this line */
                 }
+            });
+
+            chatButton.addEventListener("click", function () {
+                var messageText = chatInput.value;
                 if (messageText.trim() !== "") {
                     var messageElement = document.createElement("div");
                     messageElement.textContent = messageText;
