@@ -47,7 +47,7 @@
                     <img src="./images/icons/emojis.svg" alt="">
                     <img src="./images/icons/microphone.svg" alt="">
                     <input type="text" placeholder="Write a message...">
-                    <p class="chatbox__send--footer">Send</p>
+                    <button class="chatbox__send--footer send__button">Send</button>
                     <img src="./images/icons/attachment.svg" alt="">
                 </div>
             </div>
@@ -56,6 +56,9 @@
             </div>
         </div>
     </div>
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root | tojson }};
+    </script> 
     <script src="./assets/js/Chat.js"></script>
     <script src="./app.js"></script>
 </body>

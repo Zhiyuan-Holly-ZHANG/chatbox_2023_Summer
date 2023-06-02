@@ -9,20 +9,28 @@
 // chatbox.toggleIcon(false, chatButton);
 
 class InteractiveChatbox {
-    
+
     constructor(a, b, c) {
         this.args = {
             button: a,
             chatbox: b
         }
         this.icons = c;
-        this.state = false; 
+        this.state = false;
     }
 
     display() {
-        const {button, chatbox} = this.args;
-        
-        button.addEventListener('click', () => this.toggleState(chatbox))
+        const { openButton, chatbox, sendButton } = this.args;
+        openButton.addEventListener('click', () => this.toggleState(chatbox))
+        sendButton.addEventListener('click', () => this.onSendButton(chatbox))
+        const node = chatbox.querySelector('input');
+        node.addEventListener('keyup', ({ key }) => {
+            if (key == "Enter") {
+                this.onSendButton(chatbox)
+            }
+        })
+        // const {button, chatbox} = this.args;
+        // button.addEventListener('click', () => this.toggleState(chatbox))
     }
 
     toggleState(chatbox) {
@@ -31,7 +39,7 @@ class InteractiveChatbox {
     }
 
     showOrHideChatBox(chatbox, button) {
-        if(this.state) {
+        if (this.state) {
             chatbox.classList.add('chatbox--active')
             this.toggleIcon(true, button);
         } else if (!this.state) {
@@ -44,9 +52,9 @@ class InteractiveChatbox {
         const { isClicked, isNotClicked } = this.icons;
         let b = button.children[0].innerHTML;
 
-        if(state) {
-            button.children[0].innerHTML = isClicked; 
-        } else if(!state) {
+        if (state) {
+            button.children[0].innerHTML = isClicked;
+        } else if (!state) {
             button.children[0].innerHTML = isNotClicked;
         }
     }
