@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request, jsonify
+# Flask 是一个使用Python 编写的轻量级Web 应用程序框架
+
 from chat import get_response
 
 app = Flask(__name__)
