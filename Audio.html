@@ -6,7 +6,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Automatic transcription, captioning</title>
+  <title>Auto</title>
   <meta name="author" content="WellSource" />
 
 
@@ -110,21 +110,21 @@
     href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
   <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
   <script>
-    function popCookieConsent() {
-      window.cookieconsent.initialise({
-        "palette": {
-          "popup": {
-            "background": "#000"
-          },
-          "button": {
-            "background": "#ffd600"
-          }
-        },
-        "content": {
-          "href": "https://speechlogger.appspot.com/privacy/"
-        }
-      });
-    }
+    // function popCookieConsent() {
+    //   window.cookieconsent.initialise({
+    //     "palette": {
+    //       "popup": {
+    //         "background": "#000"
+    //       },
+    //       "button": {
+    //         "background": "#ffd600"
+    //       }
+    //     },
+    //     "content": {
+    //       "href": "https://speechlogger.appspot.com/privacy/"
+    //     }
+    //   });
+    // }
 
     function getIpKey() {
       return 'd' + 'A' + 'nM' + 'trn1NM' + 'Ba4fh';
@@ -185,52 +185,52 @@
       return text;
     }
 
-    function purchase(dollars) {
-      var jwtStr, credits;
-      switch (dollars) {
-        case 0.25:
-          jwtStr = "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMzAwOTY2MzE5NDcwN" +
-            "jg5OTAxMiIsImF1ZCI6Ikdvb2dsZSIsInR5cCI6Imdvb2dsZS9" +
-            "wYXltZW50cy9pbmFwcC9pdGVtL3YxIiwiaWF0IjoxNDEwODU0N" +
-            "Tc2LCJleHAiOjE1MTA5NDA4NTUsInJlcXVlc3QiOnsiY3VycmV" +
-            "uY3lDb2RlIjoiVVNEIiwicHJpY2UiOiIwLjI1IiwibmFtZSI6I" +
-            "lNwZWVjaGxvZ2dlciBDcmVkaXQiLCJzZWxsZXJEYXRhIjoic3B" +
-            "lZWNobG9nZ2VyLmFwcHNwb3QuY29tIiwiZGVzY3JpcHRpb24iO" +
-            "iIxLDAwMCBDaGFyYWN0ZXJzIHRvIHRyYW5zbGF0ZSJ9fQ.BPh3" +
-            "3cGv7Qsz4mVaD0lGq8Pgyko0bj3q_zJj6HbeOc8";
-          credits = 1000;
-          break;
-        case 1:
-          jwtStr = "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMzAwOTY2MzE5NDcwN" +
-            "jg5OTAxMiIsImF1ZCI6Ikdvb2dsZSIsInR5cCI6Imdvb2dsZS9" +
-            "wYXltZW50cy9pbmFwcC9pdGVtL3YxIiwiaWF0IjoxNDEwODU0N" +
-            "zIxLCJleHAiOjE1MTA5NDEwNTUsInJlcXVlc3QiOnsiY3VycmV" +
-            "uY3lDb2RlIjoiVVNEIiwicHJpY2UiOiIxIiwibmFtZSI6IlNwZ" +
-            "WVjaGxvZ2dlciBDcmVkaXQiLCJzZWxsZXJEYXRhIjoic3BlZWN" +
-            "obG9nZ2VyLmFwcHNwb3QuY29tIiwiZGVzY3JpcHRpb24iOiIxM" +
-            "CwwMDAgQ2hhcmFjdGVycyB0byB0cmFuc2xhdGUifX0.ln5-fwi" +
-            "1Cmap-eHt0nuiq7uhxVjjfCtGSYbmFZqQOOI";
-          credits = 10000;
-          break;
-        case 2:
-          jwtStr = "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMzAwOTY2MzE5NDcwN" +
-            "jg5OTAxMiIsImF1ZCI6Ikdvb2dsZSIsInR5cCI6Imdvb2dsZS9" +
-            "wYXltZW50cy9pbmFwcC9pdGVtL3YxIiwiaWF0IjoxNDEwODU0N" +
-            "zcwLCJleHAiOjE1MTA5NDExNjAsInJlcXVlc3QiOnsiY3VycmV" +
-            "uY3lDb2RlIjoiVVNEIiwicHJpY2UiOiIyIiwibmFtZSI6IlNwZ" +
-            "WVjaGxvZ2dlciBDcmVkaXQiLCJzZWxsZXJEYXRhIjoic3BlZWN" +
-            "obG9nZ2VyLmFwcHNwb3QuY29tIiwiZGVzY3JpcHRpb24iOiI0M" +
-            "CwwMDAgQ2hhcmFjdGVycyB0byB0cmFuc2xhdGUifX0.IzMruPB" +
-            "kCz-kzn9ssk8vxGicade9BOZoFTTLcgaZK0Q";
-          credits = 40000;
-          break;
-      }
-      google.payments.inapp.buy({
-        jwt: jwtStr,
-        success: function () { credit(credits); },
-        failure: function () { window.alert('Purchase failed. No transaction made.') }
-      });
-    }
+    // function purchase(dollars) {
+    //   var jwtStr, credits;
+    //   switch (dollars) {
+    //     case 0.25:
+    //       jwtStr = "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMzAwOTY2MzE5NDcwN" +
+    //         "jg5OTAxMiIsImF1ZCI6Ikdvb2dsZSIsInR5cCI6Imdvb2dsZS9" +
+    //         "wYXltZW50cy9pbmFwcC9pdGVtL3YxIiwiaWF0IjoxNDEwODU0N" +
+    //         "Tc2LCJleHAiOjE1MTA5NDA4NTUsInJlcXVlc3QiOnsiY3VycmV" +
+    //         "uY3lDb2RlIjoiVVNEIiwicHJpY2UiOiIwLjI1IiwibmFtZSI6I" +
+    //         "lNwZWVjaGxvZ2dlciBDcmVkaXQiLCJzZWxsZXJEYXRhIjoic3B" +
+    //         "lZWNobG9nZ2VyLmFwcHNwb3QuY29tIiwiZGVzY3JpcHRpb24iO" +
+    //         "iIxLDAwMCBDaGFyYWN0ZXJzIHRvIHRyYW5zbGF0ZSJ9fQ.BPh3" +
+    //         "3cGv7Qsz4mVaD0lGq8Pgyko0bj3q_zJj6HbeOc8";
+    //       credits = 1000;
+    //       break;
+    //     case 1:
+    //       jwtStr = "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMzAwOTY2MzE5NDcwN" +
+    //         "jg5OTAxMiIsImF1ZCI6Ikdvb2dsZSIsInR5cCI6Imdvb2dsZS9" +
+    //         "wYXltZW50cy9pbmFwcC9pdGVtL3YxIiwiaWF0IjoxNDEwODU0N" +
+    //         "zIxLCJleHAiOjE1MTA5NDEwNTUsInJlcXVlc3QiOnsiY3VycmV" +
+    //         "uY3lDb2RlIjoiVVNEIiwicHJpY2UiOiIxIiwibmFtZSI6IlNwZ" +
+    //         "WVjaGxvZ2dlciBDcmVkaXQiLCJzZWxsZXJEYXRhIjoic3BlZWN" +
+    //         "obG9nZ2VyLmFwcHNwb3QuY29tIiwiZGVzY3JpcHRpb24iOiIxM" +
+    //         "CwwMDAgQ2hhcmFjdGVycyB0byB0cmFuc2xhdGUifX0.ln5-fwi" +
+    //         "1Cmap-eHt0nuiq7uhxVjjfCtGSYbmFZqQOOI";
+    //       credits = 10000;
+    //       break;
+    //     case 2:
+    //       jwtStr = "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMzAwOTY2MzE5NDcwN" +
+    //         "jg5OTAxMiIsImF1ZCI6Ikdvb2dsZSIsInR5cCI6Imdvb2dsZS9" +
+    //         "wYXltZW50cy9pbmFwcC9pdGVtL3YxIiwiaWF0IjoxNDEwODU0N" +
+    //         "zcwLCJleHAiOjE1MTA5NDExNjAsInJlcXVlc3QiOnsiY3VycmV" +
+    //         "uY3lDb2RlIjoiVVNEIiwicHJpY2UiOiIyIiwibmFtZSI6IlNwZ" +
+    //         "WVjaGxvZ2dlciBDcmVkaXQiLCJzZWxsZXJEYXRhIjoic3BlZWN" +
+    //         "obG9nZ2VyLmFwcHNwb3QuY29tIiwiZGVzY3JpcHRpb24iOiI0M" +
+    //         "CwwMDAgQ2hhcmFjdGVycyB0byB0cmFuc2xhdGUifX0.IzMruPB" +
+    //         "kCz-kzn9ssk8vxGicade9BOZoFTTLcgaZK0Q";
+    //       credits = 40000;
+    //       break;
+    //   }
+    //   google.payments.inapp.buy({
+    //     jwt: jwtStr,
+    //     success: function () { credit(credits); },
+    //     failure: function () { window.alert('Purchase failed. No transaction made.') }
+    //   });
+    // }
 
     function resetCredit() {
       return;
@@ -304,8 +304,6 @@
 
     function handleAuthResult(authResult) {
       if ((TRIED_TO_AUTHORIZE_DRIVE && authResult) && !authResult.error) {
-
-
         var fileNameToSaveAs = session_title.innerText + ".txt";
         var body = "";
         if (speaker.value !== "") { body += 'Notes: ' + speaker.value + '\n_________________\n'; }
@@ -314,7 +312,6 @@
         body += '\n' + '<%= RB.getString("signature") %>';
         uploadFile(fileNameToSaveAs, body);
       } else {
-
         if (TRIED_TO_AUTHORIZE_DRIVE)
           toastNotification("Oops, it seems like something went wrong...");
       }
@@ -402,6 +399,88 @@
 
       <div class="navbar navbar-default yamm" style="z-index:1000;" role="navigation" id="navbar">
 
+        <!-- <div class="container">
+          <div class="navbar-header">
+
+            <a class="navbar-brand home" href="https://speechlogger.appspot.com/">
+              <img style="position: absolute" width="250px" src="/images/20150607_long_header.png" />
+            </a>
+            <div class="navbar-buttons">
+              <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse"
+                data-target="#navigation">
+                <span class="sr-only">Toggle Navigation</span>
+                <i class="fa fa-align-justify"></i>
+              </button>
+            </div>
+          </div>
+
+
+          <div class="navbar-collapse collapse" id="navigation">
+            <ul class="nav navbar-nav navbar-right">
+
+              <li class="dropdown">
+
+                <a href="https://speechnotes.co/files/">Transcribe Files</a>
+
+              </li>
+
+              <li class="dropdown">
+
+                <a href="/faqs/">FAQs</a>
+
+              </li>
+
+
+              <li class="dropdown" style="text-align:center;">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Products&nbsp;<span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li style="cursor: pointer">
+                    <a style="" href="https://speechlogger.appspot.com"><i class="fas fa-home"
+                        aria-hidden="true"></i>&nbsp;Home</a>
+                  </li>
+                  <li style="cursor: pointer">
+                    <a style=""
+                      href="https://chrome.google.com/webstore/detail/speechlogger-premium-toke/ogaladbjmenpoepeahpiepcomjhdcgah/"
+                      target="_blank"><i class="fas fa-gem" aria-hidden="true"></i>&nbsp;Premium</a>
+                  </li>
+                  <li style="cursor: pointer">
+                    <a style=""
+                      href="https://chrome.google.com/webstore/detail/ttsreaderx-in-page-text-t/pakknklefcjdhejnffafpeelofiekebg"
+                      target="_blank"><i class="fas fa-volume-up" aria-hidden="true"></i>&nbsp;Extension to Read Aloud
+                      ANY Website</a>
+                  </li>
+                  <li style="cursor: pointer">
+                    <a style="" href="https://speechnotes.co" target="_blank"><i class="fas fa-microphone"
+                        aria-hidden="true"></i>&nbsp;Speechnotes for Dictation</a>
+                  </li>
+                  <li style="cursor: pointer">
+                    <a style="" href="https://speechnotes.co/files" target="_blank"><i class="fa fa-file"
+                        aria-hidden="true"></i>&nbsp;Transcribe Recordings</a>
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+
+
+          <div class="collapse clearfix" id="search">
+
+            <form class="navbar-form" role="search">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search">
+                <span class="input-group-btn">
+
+                  <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                </span>
+              </div>
+            </form>
+
+          </div>
+        </div> -->
       </div>
     </div>
 
@@ -478,7 +557,7 @@
                 <button class="OkButton"
                   onclick="addPunctSequences(user_input_tags_end.value,punctuation_mark.value,'end');"> <b>ADD</b>
                 </button>
-              </div>
+              </div> 
               <div class="activityInfo" id="punct_act_contains">Or, when they contain one of the following sequences
               </div>
               <div class="tagsDisplay" id="display_any_tags"></div>
@@ -523,6 +602,8 @@
             <div class="closeButton" onclick="$('.activityContainer').hide();unbindEsc();"></div>
           </div>
         </div>
+
+        <!-- <button id="change_view_button" onclick="toggleFullScreen();"></button> -->
 
         <button class="menuhead" id="preferences_button"><img alt="Preferences" id="preferences_img"
             style="border-radius: 50%;"
@@ -662,7 +743,7 @@
           </div>
 
           <script>var QUATATION = '"';</script>
-          <!-- <div id="punctuationBar">
+          <div id="punctuationBar">
             <p style="text-align:center;">Click or speak the following punctuation marks, to append to dictation results
             </p>
             <div class="punctuationButton noselect" onclick="insertSymbol('.')" title="Click to insert"
@@ -693,7 +774,7 @@
               id="cell_smiley" style="font-size: 2em;vertical-align: top;">&#9786;</div>
             <div class=" punctuationButton noselect" onclick="insertSymbol(':-(')" title="Click to insert" id="cell_sad"
               style="font-size: 2em;vertical-align: top;">&#9785;</div>
-          </div> -->
+          </div>
         </div>
         <div class="row content">
           <div id="output_box">
@@ -861,10 +942,10 @@
   <script defer src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
   <script defer src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
   <script defer src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
-  <script defer src="./js/network/Api.js"></script>
+  <!-- <script defer src="./js/network/Api.js"></script>
   <script defer src="./js/init-firebase.js"></script>
   <script defer src="./js/init-firebase-signin.js"></script>
-  <script defer src="./js/handlersActivation.js"></script>
+  <script defer src="./js/handlersActivation.js"></script> -->
 
 
 
