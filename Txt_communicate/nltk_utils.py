@@ -1,5 +1,6 @@
 import numpy as np
 import nltk
+# Natural Language Toolkit (NLTK) is an open source Python library for Natural Language Processing. A free online book is available. 
 # nltk.download('punkt')
 from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
