@@ -5,7 +5,8 @@
         return b(a)
     } : b(a)
 }("undefined" != typeof window ? window : this, function (a, b) {
-    "use strict"; var c = [], d = a.document, e = Object.getPrototypeOf, f = c.slice, g = c.concat, h = c.push, i = c.indexOf, j = {}, k = j.toString, l = j.hasOwnProperty, m = l.toString, n = m.call(Object), o = {};
+    "use strict"; 
+    var c = [], d = a.document, e = Object.getPrototypeOf, f = c.slice, g = c.concat, h = c.push, i = c.indexOf, j = {}, k = j.toString, l = j.hasOwnProperty, m = l.toString, n = m.call(Object), o = {};
     function p(a, b) {
         b = b || d;
         var c = b.createElement("script");
