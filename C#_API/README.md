@@ -1,0 +1,3 @@
+1. obtain an API key or authentication token, which is usually provided by the API provider. This key or token will be required to access the API's resources.
+2. use C# to send HTTP requests to the API endpoint URL using the HttpClient class. You can also use third-party libraries such as RestSharp to simplify this process.
+3. parse the response using JSON deserialization to extract the relevant data. You can use the Newtonsoft.Json NuGet package or the built-in System.Text.Json namespace to deserialize the JSON response.
