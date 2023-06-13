@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Display Console Output in HTML Page</title>
+</head>
+
+<body>
+    <h1>Console Output:</h1>
+    <pre id="console-output"></pre>
+    <script>
+        // Write console output to HTML page
+        const consoleOutput = document.getElementById('console-output');
+        const originalLog = console.log;
+        console.log = function (...args) {
+            originalLog.apply(console, args);
+            consoleOutput.innerHTML += args.join(' ') + '\n';
+        };
+
+        // Example console output
+        console.log('Hello, world!');
+        console.log('The current time is:', new Date());
+
+        // Reset console.log to its original function
+        console.log = originalLog;
+    </script>
+</body>
+
+</html>

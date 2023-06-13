@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>one</title>
+    <!-- <link rel="stylesheet" href="right.css"> -->
+</head>
+
+<body>
+    <h1>My Page</h1>
+    <form>
+        <label for="filename">Enter the filename of the audio file:</label>
+        <input type="text" id="filename" name="filename">
+        <button type="button" onclick="loadAudio()">Load Audio</button>
+        <audio controls id="my-audio"></audio>
+    </form>
+    <form>
+        <label for="filename">Enter the filename of the audio file:</label>
+        <input type="text" id="filename" name="filename">
+        <button type="button" onclick="loadAudio1()">Load Audio</button>
+        <audio controls id="my-audio1"></audio>
+    </form>
+    <form>
+        <label for="filename">Enter the filename of the audio file:</label>
+        <input type="text" id="filename" name="filename">
+        <button type="button" onclick="loadAudio2()">Load Audio</button>
+        <audio controls id="my-audio2"></audio>
+    </form>
+    <form>
+        <label for="filename">Enter the filename of the audio file:</label>
+        <input type="text" id="filename" name="filename">
+        <button type="button" onclick="loadAudio3()">Load Audio</button>
+        <audio controls id="my-audio3"></audio>
+    </form>
+    <form>
+        <label for="filename">Enter the filename of the audio file:</label>
+        <input type="text" id="filename" name="filename">
+        <button type="button" onclick="loadAudio4()">Load Audio</button>
+        <audio controls id="my-audio4"></audio>
+    </form>
+    <script>
+        function loadAudio() {
+            // Get the value of the filename input
+            const filename = document.getElementById('filename').value;
+            const audioUrl = `C/${filename}`;
+            console.log(`${filename}`);
+
+            // Set the source of the audio element to the generated URL
+            document.getElementById('my-audio').src = audioUrl;
+        }
+        function loadAudio1() {
+            // Get the value of the filename input
+            const filename = document.getElementById('filename').value;
+            const audioUrl = `C/${filename}`;
+            console.log(`${filename}`);
+
+            // Set the source of the audio element to the generated URL
+            document.getElementById('my-audio1').src = audioUrl;
+        } function loadAudio2() {
+            // Get the value of the filename input
+            const filename = document.getElementById('filename').value;
+            const audioUrl = `C/${filename}`;
+            console.log(`${filename}`);
+
+            // Set the source of the audio element to the generated URL
+            document.getElementById('my-audio2').src = audioUrl;
+        } function loadAudio3() {
+            // Get the value of the filename input
+            const filename = document.getElementById('filename').value;
+            const audioUrl = `C/${filename}`;
+            console.log(`${filename}`);
+
+            // Set the source of the audio element to the generated URL
+            document.getElementById('my-audio3').src = audioUrl;
+        } function loadAudio4() {
+            // Get the value of the filename input
+            const filename = document.getElementById('filename').value;
+            const audioUrl = `C/${filename}`;
+            console.log(`${filename}`);
+
+            // Set the source of the audio element to the generated URL
+            document.getElementById('my-audio4').src = audioUrl;
+        }
+    </script>
+    <pre id="console-output"></pre>
+
+    <script>
+        const consoleOutput = document.getElementById('console-output');
+        const originalLog = console.log;
+        console.log = function (...args) {
+            originalLog.apply(console, args);
+            consoleOutput.innerHTML += args.join(' ') + '\n';
+        };
+
+        // const directoryPath = './C';
+        const directoryPath = './';
+
+        fetch(directoryPath)
+            .then(response => response.text())
+            .then(data => {
+                const parser1 = new DOMParser();
+                const htmlDocument = parser1.parseFromString(data, 'text/html');
+                const fileLinks2 = htmlDocument.querySelectorAll('a');
+                const audioFiles = Array.from(fileLinks2)
+                    .filter(link => link.textContent.includes('.mp3') || link.textContent.includes('.wav'))
+                    .map(link => ({
+                        name: link.textContent,
+                        url: link.href,
+                        lastModified: new Date(link.dataset.modified)
+                    }))
+                    .sort((a, b) => b.lastModified - a.lastModified)
+                    .slice(0, 5);
+                const attribute = 'url';
+                const attributeValues = audioFiles.map(element => element[attribute]);
+                // console.log(attributeValues.join(',\n'));
+                // console.log("\n\n\n" + attributeValues[0] + "\n\n\n");
+
+                const currentUrl = window.location.href;
+                const newwww = currentUrl.replace("canwork1.html", "");
+                // console.log(newwww);
+
+                for (let i = 0; i < 5; i++) {
+                    const aaaaaa = attributeValues[i];
+                    // const newText = aaaaaa.replace("http://127.0.0.1:5502/display_latest5/C/", '');
+                    const newText = aaaaaa.replace(newwww, "");
+                    // console.log(i);
+                    console.log(newText);
+                }
+            })
+            .catch(error => console.error(error));
+
+            // console.log = originalLog;
+    </script>
+
+</body>
+
+</html>

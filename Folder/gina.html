@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+<title>TESTING TESTING</title>
+</head>
+<script language="javascript">
+    function testdb() {
+        var objdbConn = new ActiveXObject("ADODB.Connection");
+        var strdsn = "Data Source=innocorn-db.cxj08yarrr4p.ap-southeast-1.rds.amazonaws.com;Initial Catalog=KioskCMS_Dev;User ID=master;Password=stemhubmaster;Application Name=KioskCMS_Dev; TrustServerCertificate=Yes";  
+        objdbConn.Open(strdsn);       
+        document.write("Connection Succeeds!");      
+        objdbConn.Close();                    
+    }
+</script>
+<body>
+    This is my db testing page.
+<br>
+<input type="button" value="submit" onclick="testdb()" />
+</body>
+</html>

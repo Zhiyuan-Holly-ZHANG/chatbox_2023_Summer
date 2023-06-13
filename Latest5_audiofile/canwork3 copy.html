@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>one</title>
+
+
+</head>
+
+<body>
+<h1>My Page</h1>
+<pre id="console-output"></pre>
+
+<script>
+    const consoleOutput = document.getElementById('console-output');
+    const originalLog = console.log;
+    console.log = function (...args) {
+        originalLog.apply(console, args);
+        consoleOutput.innerHTML += args.join(' ') + '\n';
+    };
+
+
+    const directoryPath = './';
+    var attributeValues = ["a", "a", "a", "a", "a"];
+    fetch(directoryPath)
+        .then(response => response.text())
+        .then(data => {
+            const parser1 = new DOMParser();
+            const htmlDocument = parser1.parseFromString(data, 'text/html');
+            const fileLinks2 = htmlDocument.querySelectorAll('a');
+            const audioFiles = Array.from(fileLinks2)
+                .filter(link => link.textContent.includes('.mp3') || link.textContent.includes('.wav'))
+                .map(link => ({
+                    name: link.textContent,
+                    url: link.href,
+                    lastModified: new Date(link.dataset.modified)
+                }))
+                .sort((a, b) => b.lastModified - a.lastModified)
+                .slice(0, 5);
+            const attribute = 'url';
+            attributeValues = audioFiles.map(element => element[attribute]);
+
+
+            const currentUrl = window.location.href;
+            const newwww = currentUrl.replace("canwork2.html", "");
+
+
+            for (let i = 0; i < 5; i++) {
+                const aaaaaa = attributeValues[i];
+
+                const newText = aaaaaa.replace(newwww, "");
+                attributeValues[i] = newText;
+
+
+            }
+        })
+        .catch(error => console.error(error));
+
+
+    function loadAudio() {
+
+
+        const filename = attributeValues[0];
+
+        const audioUrl = `${filename}`;
+
+
+        document.getElementById('my-audio').src = audioUrl;
+    }
+
+
+    function loadAudio1() {
+
+        const filename = attributeValues[1];
+
+        const audioUrl = `${filename}`;
+
+
+        document.getElementById('my-audio1').src = audioUrl;
+    }
+
+    function loadAudio2() {
+
+        const filename = attributeValues[2];
+
+        const audioUrl = `${filename}`;
+
+
+        document.getElementById('my-audio2').src = audioUrl;
+    }
+
+    function loadAudio3() {
+
+        const filename = attributeValues[3];
+
+        const audioUrl = `${filename}`;
+
+
+        document.getElementById('my-audio3').src = audioUrl;
+    }
+
+    function loadAudio4() {
+
+        const filename = attributeValues[4];
+
+        const audioUrl = `${filename}`;
+
+
+        document.getElementById('my-audio4').src = audioUrl;
+    }
+</script>
+
+<form>
+    <label for="filename"></label>
+
+    <button type="button" onclick="loadAudio()">Load Audio</button>
+    <audio controls id="my-audio"></audio>
+</form>
+<form>
+    <label for="filename"></label>
+
+    <button type="button" onclick="loadAudio1()">Load Audio</button>
+    <audio controls id="my-audio1"></audio>
+</form>
+<form>
+    <label for="filename"></label>
+
+    <button type="button" onclick="loadAudio2()">Load Audio</button>
+    <audio controls id="my-audio2"></audio>
+</form>
+<form>
+    <label for="filename"></label>
+
+    <button type="button" onclick="loadAudio3()">Load Audio</button>
+    <audio controls id="my-audio3"></audio>
+</form>
+<form>
+    <label for="filename"></label>
+
+    <button type="button" onclick="loadAudio4()">Load Audio</button>
+    <audio controls id="my-audio4"></audio>
+</form>
+
+<script>
+    var comments = document.createNodeIterator(
+        document,
+        NodeFilter.SHOW_COMMENT,
+        null,
+        false
+    );
+
+
+    while (comments.nextNode()) {
+        var commentNode = comments.referenceNode;
+        if (commentNode.nodeValue.indexOf('string-to-remove') !== -1) {
+            commentNode.parentNode.removeChild(commentNode);
+        }
+    }
+</script>
+<script src="./d.js"></script>
+</body>
+
+</html>

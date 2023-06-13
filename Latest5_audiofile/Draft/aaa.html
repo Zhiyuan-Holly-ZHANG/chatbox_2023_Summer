@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Page</title>
+</head>
+
+<body>
+    <h1>My Page</h1>
+    <audio controls id="my-audio"></audio>
+    <p>This is a paragraph.</p>
+
+
+
+    <script>
+        // Get audio filename from query string parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const filename = urlParams.get('M.mp3');
+
+        // Generate URL of audio file and set it as the source of the audio element
+        const audioUrl = `./${filename}`;
+        document.getElementById('my-audio').src = audioUrl;
+    </script>
+</body>
+
+</html>

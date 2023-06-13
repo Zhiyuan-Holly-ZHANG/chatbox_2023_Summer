@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>13th</title>
+
+<body>
+    <audio controls id="audio-player">
+        <source src="./M.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        function findAudioFile() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', './', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var files = xhr.responseText.split('\n');
+                    for (var i = 0; i < files.length; i++) {
+                        if (files[i].indexOf('M.mp3') !== -1) {
+                            var audioPlayer = document.getElementById('audio-player');
+                            audioPlayer.getElementsByTagName('source')[0].src = './' + files[i];
+                            audioPlayer.load();
+                            break;
+                        }
+                    }
+                }
+            };
+            xhr.send();
+        }
+
+        window.onload = function () {
+            findAudioFile();
+        };
+    </script>
+</body>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>one</title>
+</head>
+
+<body>
+    <h1>My Page</h1>
+    <form>
+        <label for="filename">Enter the filename of the audio file:</label>
+        <input type="text" id="filename" name="filename">
+        <button type="button" onclick="loadAudio()">Load Audio</button>
+    </form>
+    <audio controls id="my-audio"></audio>
+
+    <!-- <script>
+        function loadAudio() {
+            // Get the value of the filename input
+            const filename = document.getElementById('filename').value;
+
+            // Generate the URL of the audio file
+            const audioUrl = `${filename}`;
+            console.log(`${filename}`);
+            // audioUrl
+            // Set the source of the audio element to the generated URL
+            document.getElementById('my-audio').src = audioUrl;
+        }
+    </script>  -->
+
+
+    <script>
+        // const fs = import fs;//require('fs');
+
+        // const folderPath = './C/';
+        // const searchSubstring = 'copy';
+
+        // fs.readdir(folderPath, (err, files) => {
+        //     if (err) {
+        //         console.error(err);
+        //         return;
+        //     }
+
+        //     const matchingFiles = files.filter(file => file.includes(searchSubstring));
+        //     const aaa = "copy";
+        //     console.log(files.filter(file => file.includes(aaa)));
+        //     console.log('Matching files:');
+        //     console.log(matchingFiles);
+        // });
+    </script><pre id="console-output"></pre>
+    <script>
+        console.log = function (...args) {
+            originalLog.apply(console, args);
+            consoleOutput.innerHTML += args.join(' ') + '\n';
+        };
+    </script>
+
+    <script>
+        const directoryPath = './C';
+
+        fetch(directoryPath)
+            .then(response => response.text())
+            // .then(data => {
+            //     const parser = new DOMParser();
+            //     const htmlDocument = parser.parseFromString(data, 'text/html');
+            //     const fileLinks = htmlDocument.querySelectorAll('a');
+            //     console.log(fileLinks);
+            //     const fileNames = Array.from(fileLinks).map(link => link.textContent);
+            //     console.log(fileNames);
+            // })
+            // .catch(error => console.error(error));
+
+            // const matchingFiles = files.filter(file => file.includes(searchSubstring));
+            // const aaa = "copy";
+            // console.log(files.filter(file => file.includes(aaa)));
+            // console.log('Matching files:');
+            // console.log(matchingFiles);
+            .then(data => {
+                const parser1 = new DOMParser();
+                const htmlDocument = parser1.parseFromString(data, 'text/html');
+                const fileLinks2 = htmlDocument.querySelectorAll('a');
+                console.log(fileLinks2);
+                const audioFiles = Array.from(fileLinks2)
+                    .filter(link => link.textContent.includes('.mp3') || link.textContent.includes('.wav'))
+                    .map(link => link.href);
+                console.log(audioFiles);
+            })
+            .catch(error => console.error(error));
+    </script>
+
+</body>
+
+</html>
