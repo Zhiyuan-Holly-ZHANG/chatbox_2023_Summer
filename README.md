@@ -1,4 +1,4 @@
-# chatbox_2023_Summer
+# 2023_Summer Internship
 
 
 ## requirement
@@ -19,7 +19,9 @@
 2. https://speechlogger.appspot.com/
 
 
-# run a JavaScript file using Node.js:
+---
+
+# Run a JavaScript file using Node.js:
 
 1. Install `Node.js`: If you haven't already, you'll need to download and install Node.js from the official website. Follow the installation instructions for your operating system.
 
