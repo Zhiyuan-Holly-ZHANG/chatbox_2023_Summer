@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AudioHistoryList</title>
+    <style>
+        iframe {
+            width: 100%;
+            height: 500px;
+            transform-origin: top left;
+            vertical-align: bottom;
+        }
+
+        .zoom {
+            transform: scale(1.8);
+        }
+    </style>
+</head>
+
+<body onload="loadAudio()">
+    <h3>Audio History List</h3>
+    <pre id="console-output"></pre>
+    <script>
+        const http = require('http');
+        const fs = require('fs');
+
+        const sourceUrl = window.location.href;
+        const destinationUrl = 'http://127.0.0.1:5502/Latest5_audiofile/canwork4.html';
+
+
+        http.get(sourceUrl, (response) => {
+            const fileStream = fs.createWriteStream('audio.mp3');
+            response.pipe(fileStream);
+
+
+
+            fileStream.on('finish', () => {
+                const fileStream = fs.createReadStream('audio.mp3');
+                const request = http.request(destinationUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'audio/mp3'
+                    }
+                }, (response) => {
+                    console.log('File uploaded successfully');
+                });
+                fileStream.pipe(request);
+            });
+        });
+    </script>
+    <script>
+        const consoleOutput = document.getElementById('console-output');
+        const originalLog = console.log;
+        console.log = function (...args) {
+            originalLog.apply(console, args);
+            consoleOutput.innerHTML += args.join(' ') + '\n';
+        };
+
+        const directoryPath = './';
+        var attributeValues = ["a", "a", "a", "a", "a"];
+        fetch(directoryPath)
+            .then(response => response.text())
+            .then(data => {
+                const parser1 = new DOMParser();
+                const htmlDocument = parser1.parseFromString(data, 'text/html');
+                const fileLinks2 = htmlDocument.querySelectorAll('a');
+                const audioFiles = Array.from(fileLinks2)
+                    .filter(link => link.textContent.includes('.mp3') || link.textContent.includes('.wav'))
+                    .map(link => ({
+                        name: link.textContent,
+                        url: link.href,
+                        lastModified: new Date(link.dataset.modified)
+                    }))
+                    .sort((a, b) => b.lastModified - a.lastModified)
+                    .slice(0, 5);
+                const attribute = 'url';
+                attributeValues = audioFiles.map(element => element[attribute]);
+
+                const currentUrl = window.location.href;
+                const newwww = currentUrl.replace("chatHistory_onLoad.html", "");
+
+                for (let i = 0; i < 5; i++) {
+                    const aaaaaa = attributeValues[i];
+                    const newText = aaaaaa.replace(newwww, "");
+                    attributeValues[i] = newText;
+                    console.log(i + 1 + '. ' + newText);
+                }
+            })
+            .catch(error => console.error(error));
+
+        function loadAudio() {
+            var filename = attributeValues[0];
+            var audioUrl = `${filename}`;
+            document.getElementById('my-audio').src = audioUrl;
+            for (let i = 1; i < 5; i++) {
+                filename = attributeValues[i];
+                audioUrl = `${filename}`;
+                document.getElementById('my-audio' + i).src = audioUrl;
+            }
+            console.log('Audio files loaded successfully!')
+        }
+    </script>
+
+    <form>
+        <label for="filename">1</label>
+        <audio controls id="my-audio"></audio>
+    </form>
+    <form>
+        <label for="filename">2</label>
+        <audio controls id="my-audio1"></audio>
+    </form>
+    <form>
+        <label for="filename">3</label>
+        <audio controls id="my-audio2"></audio>
+    </form>
+    <form>
+        <label for="filename">4</label>
+        <audio controls id="my-audio3"></audio>
+    </form>
+    <form>
+        <label for="filename">5</label>
+        <audio controls id="my-audio4"></audio>
+    </form>
+    <br />
+    <h3>Text Conversation History List</h3>
+    <iframe class="zoom"
+        src="https://lookerstudio.google.com/embed/reporting/dc452601-d188-45dd-9d54-fd6ef7281781/page/PXGAD"
+        frameborder="0" style="border:0" allowfullscreen></iframe>
+</body>
+
+</html>
