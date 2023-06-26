@@ -55,7 +55,7 @@ body {
 .send__button {
     padding: 6px;
     background: transparent;
-    border: none;
+    /* border: none; */
     outline: none;
     cursor: pointer;
 }

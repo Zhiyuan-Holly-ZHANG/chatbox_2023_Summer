@@ -23,7 +23,193 @@
                 </div>
                 <div class="chatbox__messages">
                     <div></div>
+                    <!-- <div class="webchat__carousel-filmstrip__complimentary-content c">
+                        <ul class="webchat__carousel-filmstrip__attachments react-film__filmstrip__list">
+                          <li aria-roledescription="attachment"
+                            class="webchat__carousel-filmstrip__attachment react-film__filmstrip__item">
+                            <div class="webchat--css-reike-111jw2m">机器人附加了:</div>
+                            <div
+                              class="webchat__bubble webchat__bubble--nub-on-top webchat--css-reike-1qo0vqe webchat--css-reike-csybat">
+                              <div class="webchat__bubble__nub-pad"></div>
+                              <div class="webchat__bubble__content">
+                                <div class="herocard-container"
+                                  data-activity-id="8CFhw4aWxX55UJxMrMp0aY-us|0000009"
+                                  data-con-id="8CFhw4aWxX55UJxMrMp0aY-us" data-feedback="false"
+                                  data-view-btn="8CFhw4aWxX55UJxMrMp0aY-us|0000007" data-msg-type=""
+                                  data-inzendesk="false"><img class="herocard-image"
+                                    src="./Book me Bob_files/06105262-df87-4147-9fd8-cad484c35ff7.jpg"
+                                    alt="">
+                                  <div class="herocard-text-area">
+                                    <div class="ac-textBlock herocard-title-text">大宴会厅 - 会议</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li aria-roledescription="attachment"
+                            class="webchat__carousel-filmstrip__attachment react-film__filmstrip__item">
+                            <div class="webchat--css-reike-111jw2m">机器人附加了:</div>
+                            <div
+                              class="webchat__bubble webchat__bubble--nub-on-top webchat--css-reike-1qo0vqe webchat--css-reike-csybat">
+                              <div class="webchat__bubble__nub-pad"></div>
+                              <div class="webchat__bubble__content">
+                                <div class="herocard-container"
+                                  data-activity-id="8CFhw4aWxX55UJxMrMp0aY-us|0000009"
+                                  data-con-id="8CFhw4aWxX55UJxMrMp0aY-us" data-feedback="false"
+                                  data-view-btn="8CFhw4aWxX55UJxMrMp0aY-us|0000007" data-msg-type=""
+                                  data-inzendesk="false"><img class="herocard-image"
+                                    src="./Book me Bob_files/386dfdbe-438f-465c-b172-29e6c6ca0fee.jpg"
+                                    alt="">
+                                  <div class="herocard-text-area">
+                                    <div class="ac-textBlock herocard-title-text">大宴会厅 - 会议</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li aria-roledescription="attachment"
+                            class="webchat__carousel-filmstrip__attachment react-film__filmstrip__item">
+                            <div class="webchat--css-reike-111jw2m">机器人附加了:</div>
+                            <div
+                              class="webchat__bubble webchat__bubble--nub-on-top webchat--css-reike-1qo0vqe webchat--css-reike-csybat">
+                              <div class="webchat__bubble__nub-pad"></div>
+                              <div class="webchat__bubble__content">
+                                <div class="herocard-container"
+                                  data-activity-id="8CFhw4aWxX55UJxMrMp0aY-us|0000009"
+                                  data-con-id="8CFhw4aWxX55UJxMrMp0aY-us" data-feedback="false"
+                                  data-view-btn="8CFhw4aWxX55UJxMrMp0aY-us|0000007" data-msg-type=""
+                                  data-inzendesk="false"><img class="herocard-image"
+                                    src="./Book me Bob_files/2f8dc8b3-5e85-479f-8140-470946f12cda.jpg"
+                                    alt="">
+                                  <div class="herocard-text-area">
+                                    <div class="ac-textBlock herocard-title-text">大宴会厅 - 宴会 - 婚礼</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                    </div> -->
+                    
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                          <img src="{{ url_for('static', filename='images/img3.jpeg') }}" style="width:100%">
+                          <!-- <div class="text">Caption Text</div> -->
+                        </div>
+                  
+                        <div class="mySlides fade">
+                          <img src="{{ url_for('static', filename='images/img4.jpeg') }}" style="width:100%">
+                          <!-- <div class="text">Caption Text</div> -->
+                        </div>
+                  
+                        <div class="mySlides fade">
+                          <img src="{{ url_for('static', filename='images/img5.jpeg') }}" style="width:100%">
+                          <!-- <div class="text">Caption Text</div> -->
+                        </div>
+                  
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      </div>
+                      <br>
+                  
+                      <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                      </div>
+
                 </div>
+                <style>
+                    /* Style for the slideshow container */
+                    .slideshow-container {
+                      max-width: 100%;
+
+                      transform: translateY(-25px);
+                      /* position: relative;
+                      margin: auto; */
+
+                    }
+              
+                    /* Style for the slides */
+                    .mySlides {
+                      display: none;
+                    }
+              
+                    /* Style for the previous and next buttons */
+                    .prev, .next {
+                      cursor: pointer;
+                      position: absolute;
+                      top: 50%;
+                      width: auto;
+                      margin-top: -22px;
+                      padding: 16px;
+                      color: white;
+                      font-weight: bold;
+                      font-size: 18px;
+                      transition: 0.6s ease;
+                      border-radius: 0 3px 3px 0;
+                      user-select: none;
+                    }
+              
+                    /* Style for the next button */
+                    .next {
+                      right: 0;
+                      border-radius: 3px 0 0 3px;
+                    }
+              
+                    /* Style for the buttons on hover */
+                    .prev:hover, .next:hover {
+                      background-color: rgba(0,0,0,0.8);
+                    }
+              
+                    /* Style for the caption text */
+                    .text {
+                      color: #f2f2f2;
+                      font-size: 15px;
+                      padding: 8px 12px;
+                      position: absolute;
+                      bottom: 8px;
+                      width: 100%;
+                      text-align: center;
+                    }
+              
+                    /* Style for the dot indicators */
+                    .dot {
+                      cursor: pointer;
+                      height: 15px;
+                      width: 15px;
+                      margin: 0 2px;
+                      background-color: #bbb;
+                      border-radius: 50%;
+                      display: inline-block;
+                      transition: background-color 0.6s ease;
+                    }
+              
+                    /* Style for the active dot */
+                    .active, .dot:hover {
+                      background-color: #717171;
+                    }
+              
+                    /* Style for the fade animation */
+                    .fade {
+                      -webkit-animation-name: fade;
+                      -webkit-animation-duration: 1.5s;
+                      animation-name: fade;
+                      animation-duration: 1.5s;
+                    }
+              
+                    /* Animation for fading in and out of images */
+                    @-webkit-keyframes fade {
+                      from {opacity: .4} 
+                      to {opacity: 1}
+                    }
+              
+                    @keyframes fade {
+                      from {opacity: .4} 
+                      to {opacity: 1}
+                    }
+                  </style>
+                
                 <div class="chatbox__footer">
 
                     <!-- <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,6 +255,7 @@
         $SCRIPT_ROOT = {{ request.script_root | tojson }};
     </script>
     <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='script_s.js') }}"></script>
 
 </body>
 
