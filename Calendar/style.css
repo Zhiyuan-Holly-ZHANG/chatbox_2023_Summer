@@ -1,0 +1,30 @@
+#calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:baseline;
+  }
+  
+  .day {
+    width: 14%;
+    height: 100px;
+    border: 1px solid gray;
+  }
+  
+  .day .date {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .day .events {
+    height: 60px;
+    overflow-y: scroll;
+  }
+  
+  .day .event {
+    padding: 5px;
+    background-color: lightblue;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }

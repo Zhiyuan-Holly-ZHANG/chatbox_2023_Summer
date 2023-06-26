@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Real-time Calendar</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="controls">
+      <label for="year">Year: </label>
+      <select id="year" name="year"></select>
+      <label for="month">Month: </label>
+      <select id="month" name="month">
+        <option value="0">January</option>
+        <option value="1">February</option>
+        <option value="2">March</option>
+        <option value="3">April</option>
+        <option value="4">May</option>
+        <option value="5">June</option>
+        <option value="6">July</option>
+        <option value="7">August</option>
+        <option value="8">September</option>
+        <option value="9">October</option>
+        <option value="10">November</option>
+        <option value="11">December</option>
+      </select>
+      <button type="button" onclick="updateCalendar()">Go</button>
+    </div>
+    <div id="calendar"></div>
+    <form>
+      <label for="date">Date: </label>
+      <input type="date" id="date" name="date">
+      <br>
+      <label for="event">Event: </label>
+      <input type="text" id="event" name="event">
+      <br>
+      <button type="button" onclick="addEvent()">Add Event</button>
+    </form>
+    <script src="u.js"></script>
+  </body>
+</html>
