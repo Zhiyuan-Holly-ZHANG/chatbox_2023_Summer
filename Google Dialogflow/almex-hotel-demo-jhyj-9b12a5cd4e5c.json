@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "almex-hotel-demo-jhyj",
+  "private_key_id": "9b12a5cd4e5c396384ab9277a8c7fc53ac4a55c7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDdLtGiX6294pCI\n2TNVs+Shn31imPktG1MtMZILbVDmOIWjB7wtVwKU5EWyMTGFjNntJgpgQlHIJrZ6\nDJG3uA6QeAW0XqOMpmZ8ttP8EYLKWkA2AK+ut7anOy+P+qEl8x5tkRoe9yVmNoax\nx62m1gQj+pVQRyI71nMrkG5G0LONgmeO/yY59babCU1bnLOv4tRBqFJJjmvElaTL\n94qg6SqY3pGfZ0MUp8CKjyKmGdK8WkJarL9fgm8uBtsLwLDjc+GhCsKa89RRptue\nSD/udQevSg9xQS3HIodkqHZZmwGanBCJk/GJEGZaSGFXv8qq/9aNd1rm3Bgpv+NI\nKIvjrTh/AgMBAAECggEACAkwtEjPu+Hi5PwnpCSlblp9q/5wekJWgDs74RJK19/F\n8r0BtJ4AKdgfUMmMplRVc0P9mtmW4Ekect/zsrN17xz+GkmunWEuiCmLp5FVTRfH\njVXWffZjwaJwPcXaDcP4wqZucZM7dqx/QGgrMJObbpIYmo7k1ZHTwCXwl0xlDhHH\nQQzVPvXMqy9ycZ0Ck6+XOGwMU8KsAIZ+ZieKXHnswj7VC93sMHVIwuwzUGT8ZVtc\nhDPne6mVt4BeU92iitLNOjFnedb3m8eN12ky7gBblF+XdFblGM19uiXT+MV/jt/f\ns6MRTk3wGq81hZQJwq3I7vRkGXMxMF9E+7zKvFOzBQKBgQDu4gKgwRtR/Hs4+qsU\nCjhlYnKdM/GGca7aAuhpX1xy6p208/J5jeldcPcR6D6CS7TuApAIydkKzCS7FowO\njQzewq9hkl5VToYj58KUOCOTTXjFrQalr3MjkqPWhBkog8LzAMGAMr15mm7GhgL1\ng3Eeq0sLSGUMfDUoSeXI/RmDawKBgQDtCCBMUe8Cm9rLu8+rjeYXHTefLw7q3pmp\n+i6kZKJ2zoWnAphBWNr8ibf75DCDRp2Q7yNPuJpUPWP97AXmE59NTjyFmrWbYz2x\nI/BFfEC9PZ7GQj8xBQonT2YfN5B+kCUJciMgjyS6Fy87ApjO9gSVuLucd77+iUQU\nGtF9p2y4PQKBgCF6uYWQKuUNrrNopktztz22U3vmyMXf7vKND8ec3tcYPKwcuHIC\nyp8W8vmmhAQ82gm1gDxLFckmnUs/OLfdWt1piazyF5h7Hd+wXpvpVksRw4ho3JKi\nCVAGAEJTVzdPaCYoh/YQpm+Bjl7ybz27g0IaHbViGw9p5QVVfgfyOP4rAoGAdIoQ\nRzXpi6DRXGYE3tYvkKG+3Tcn4HZ9msL098K61isIL2rpLQfg81VK7j/tUj3/7miF\nNgcPaeedKBVJeSugoUOcIhxEuhd7F4MR+Tf0JJcNX3Dm3NUbfuRc03BgTLnWW+SQ\nPMvkRNJtWFgYhXkUHADtzSpa747RuAjPgzY0EAkCgYEAmadgKc/5l1gJUd9UFxvY\nZ/h1GvJa/OkLNZZsSjhLjniG4cBO3TpOIZzK1pdbTRhmK3HPB93dxHgKU/tz772F\nDYn2TJ96qGErjp+GQMWVJXUrcaZJLwCX1kx2MNjqPGrhlu11++3imJYAtQ+5ynOo\nONm7EyWysvieTgVm/AO2AKs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "almex-hotel-demo@almex-hotel-demo-jhyj.iam.gserviceaccount.com",
+  "client_id": "116458659476390715798",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/almex-hotel-demo%40almex-hotel-demo-jhyj.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
