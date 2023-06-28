@@ -1,0 +1,17 @@
+.rsc-ts-bubble {
+    /* background-color: #007bff !important; */
+    color: black !important;
+    font-size: 16px !important;
+    font-family: Calibri, "Helvetica Neue", Arial, "sans-serif" !important;
+}
+
+.rsc-os-option-element {
+    background-color: rgb(145, 123, 76) !important;
+    color: rgb(255, 255, 255);
+    font-family: Calibri, "Helvetica Neue", Arial, "sans-serif";
+    font-size: 13px;
+    border-top: 2px solid #e9eef4;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
