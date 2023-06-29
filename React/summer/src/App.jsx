@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import ChatBot from 'react-simple-chatbot';
 import ScrollToBottom from 'react-scroll-to-bottom';
 
@@ -28,11 +28,11 @@ const steps = [
     {
         id: 'Option1 New reservation',
         options: [
-            { value: 1, label: 'New booking for rooms', trigger: 'Option1.1 New booking' },
-            { value: 2, label: 'Wedding & Events', trigger: 'Option1.2' },
-            { value: 3, label: 'Group booking', trigger: 'Option1.3' },
-            { value: 4, label: 'Long stay', trigger: 'Option1.4' },
-            { value: 5, label: 'Something else', trigger: 'Option1.5' },
+            { value: 1.1, label: 'New booking for rooms', trigger: 'Option1.1 New booking' },
+            { value: 1.2, label: 'Wedding & Events', trigger: 'Option1.2' },
+            { value: 1.3, label: 'Group booking', trigger: 'Option1.3' },
+            { value: 1.4, label: 'Long stay', trigger: 'Option1.4' },
+            { value: 1.5, label: 'Something else', trigger: 'Option1.5' },
             { value: 6, label: 'Go back', trigger: 'Option6' },
         ],
     },
@@ -42,16 +42,15 @@ const steps = [
         message: 'What’s your purpose of your visit to Hong Kong this time?',
         trigger: 'Option1.1'
         // end: true,
-
     },
     {
         id: 'Option1.1',
         options: [
-            { value: 1, label: 'Business trip', trigger: 'Option1.1.1' },
-            { value: 2, label: 'Holiday', trigger: 'Option1.1.2' },
-            { value: 3, label: 'Conference, Events', trigger: 'Option1.1.3' },
-            { value: 4, label: 'Anniversary', trigger: 'Option1.1.4' },
-            { value: 5, label: 'Other', trigger: 'Option1.1.5' },
+            { value: 1.11, label: 'Business trip', trigger: 'Option1.1.1' },
+            { value: 1.12, label: 'Holiday', trigger: 'Option1.1.2' },
+            { value: 1.13, label: 'Conference, Events', trigger: 'Option1.1.3' },
+            { value: 1.14, label: 'Anniversary', trigger: 'Option1.1.4' },
+            { value: 1.15, label: 'Other', trigger: 'Option1.1.5' },
             { value: 6, label: 'Cancel', trigger: 'Option6' },
         ],
     },
@@ -64,12 +63,12 @@ const steps = [
     {
         id: 'ppl',
         options: [
-            { value: 1, label: 'Own Self', trigger: 'time' },
-            { value: 2, label: 'Colleagues / Business Partner', trigger: 'time' },
-            { value: 3, label: 'Couples', trigger: 'time' },
-            { value: 4, label: 'Family', trigger: 'time' },
-            { value: 5, label: 'Friend', trigger: 'Option1.1.5' },
-            { value: 5, label: 'Group of Adults', trigger: 'Option1.1.5' },
+            { value: 1.111, label: 'Own Self', trigger: 'time' },
+            { value: 1.112, label: 'Colleagues / Business Partner', trigger: 'time' },
+            { value: 1.113, label: 'Couples', trigger: 'Option1.1.3' },
+            { value: 1.114, label: 'Family', trigger: 'Option1.1.4' },
+            { value: 1.115, label: 'Friend', trigger: 'Option1.1.5' },
+            { value: 1.115, label: 'Group of Adults', trigger: 'Option1.1.5' },
             { value: 6, label: 'Cancel', trigger: 'Option6' },
         ],
     },
@@ -82,11 +81,11 @@ const steps = [
     {
         id: 'time_',
         options: [
-            { value: 1, label: 'Few hours', trigger: 'hours' },
-            { value: 2, label: '1 night', trigger: 'Option1.1.5' },
-            { value: 3, label: '2 nights', trigger: 'Option1.1.5' },
-            { value: 4, label: '3+ nights', trigger: 'Option1.1.5' },
-            { value: 5, label: '5+ nights', trigger: 'Option1.1.5' },
+            { value: 1.1111, label: 'Few hours', trigger: 'hours' },
+            { value: 1.1112, label: '1 night', trigger: 'Option1.1.5' },
+            { value: 1.1113, label: '2 nights', trigger: 'Option1.1.5' },
+            { value: 1.1114, label: '3+ nights', trigger: 'Option1.1.5' },
+            { value: 1.1115, label: '5+ nights', trigger: 'Option1.1.5' },
             { value: 6, label: 'Cancel', trigger: 'Option6' },
         ],
     },
@@ -105,11 +104,11 @@ const steps = [
     {
         id: 'room_info',
         options: [
-            { value: 1, label: 'Few hours', trigger: 'hours' },
-            { value: 2, label: '1 night', trigger: 'Option1.1.5' },
-            { value: 3, label: '2 nights', trigger: 'Option1.1.5' },
-            { value: 4, label: '3+ nights', trigger: 'Option1.1.5' },
-            { value: 5, label: '5+ nights', trigger: 'Option1.1.5' },
+            { value: 1.11111, label: 'Few hours', trigger: 'hours' },
+            { value: 1.11112, label: '1 night', trigger: 'Option1.1.5' },
+            { value: 1.11113, label: '2 nights', trigger: 'Option1.1.5' },
+            { value: 1.11114, label: '3+ nights', trigger: 'Option1.1.5' },
+            { value: 1.11115, label: '5+ nights', trigger: 'Option1.1.5' },
             { value: 6, label: 'Cancel', trigger: 'Option6' },
         ],
     },
