@@ -26,25 +26,25 @@ const steps = [
     }, {
         id: 'Option2Selected',
         // message: 'Choose from the options below.',
-        message: 'adfafasf',
+        message: '2',
         // trigger: 'Option1.1 New booking'
         end: true,
     }, {
         id: 'Option3Selected',
         // message: 'Choose from the options below.',
-        message: 'adfafasf',
+        message: '3',
         // trigger: 'Option1.1 New booking'
         end: true,
     }, {
         id: 'Option4Selected',
         // message: 'Choose from the options below.',
-        message: 'adfafasf',
+        message: '4',
         // trigger: 'Option1.1 New booking'
         end: true,
     }, {
         id: 'Option5Selected',
         // message: 'Choose from the options below.',
-        message: 'adfafasf',
+        message: '5',
         // trigger: 'Option1.1 New booking'
         end: true,
     }]

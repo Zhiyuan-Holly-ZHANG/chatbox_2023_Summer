@@ -18,9 +18,9 @@
 
 
 .rsc-container {
-    height: 700px;
+    height: 700px !important;
 }
 
 .rsc-content {
-    height: 585px;
+    height: 585px !important;
 }
