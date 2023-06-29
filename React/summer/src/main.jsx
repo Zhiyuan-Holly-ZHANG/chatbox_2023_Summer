@@ -6,7 +6,7 @@ import './my.css';
 import { useRef, useEffect } from 'react';
 import ChatBot from 'react-simple-chatbot';
 import ScrollToBottom from 'react-scroll-to-bottom';
-// import MyChatbot from './button.jsx';
+
 
 const CustomHeader = () => {
   return (
@@ -31,7 +31,7 @@ const steps = [
   {
     id: 'Greet',
     component: (
-      // <img src='https://psc2.cf2.poecdn.net/26790cfba136c00e33b514567e8cdca55e985f63/_next/static/media/chatGPTAvatar.04ed8443.png' />
+      
 
       <img src="https://assets.bookmebob.com/bmbgallery/5b0fb091-d3ed-435c-9096-af820013acea/216fcbb1-1580-4b76-b8da-cf987366ade6.jpg" width='300px' />
     )
@@ -55,9 +55,6 @@ const steps = [
   },
   {
     id: 'GreetMore',
-    // component: (
-    //   <img src="/assets/216fcbb1-1580-4b76-b8da-cf987366ade6.jpg" alt="My Image" />
-    // ),
     message: 'Choose an option below and I will do my best to find the right answer for you.',
     trigger: 'Options',
 
@@ -128,7 +125,7 @@ const steps = [
   {
     id: 'Business',
     message: 'Who are you traveling with?',
-    // end: true,
+    
     trigger: 'ppl'
   },
   {
@@ -173,9 +170,9 @@ const steps = [
   }, {
     id: 'Option6',
     options: [{ label: "Go back", trigger: "GreetMore" }]
-    // message: 'Bye',
+    
 
-    // end: true,
+    
   },]
 
 const chatbot1 = React.createRef();
@@ -184,7 +181,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
   <ScrollToBottom className="chatbot1"><ChatBot headerComponent={<CustomHeader />}
     steps={steps} ref={chatbot1} />
-    {/* document.getElementById('root') */}
   </ScrollToBottom>
 
   // <React.StrictMode>
